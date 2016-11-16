@@ -1,0 +1,193 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - My ASP.NET Application</title>
+    <link href="/MongDbSample/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/MongDbSample/Content/site.css" rel="stylesheet" />
+
+    <script src="/MongDbSample/Scripts/modernizr-2.6.2.js"></script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/MongDbSample/">GlobalMart WebApi Documentation</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/MongDbSample/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+
+
+        <div class="jumbotron">
+            <h1>Product Catalog Service Api Documentation</h1>
+        </div>
+
+        <div class="row">
+
+            <h2>DataBase -> <b>SapientProduct</b></h2>
+            <h2>CollectionName -> <b>Products</b></h2>
+            <div class="col-md-4">
+                <h2>Request</h2>
+                <p>
+                    http://localhost/MongDbSample/ProductCatalog/GetAllProducts
+                </p>
+
+                <h2>Response</h2>
+                <p>
+                    <pre>
+                [
+  {
+    "Id": "582b6921597e11c45bd10ea4",
+    "Catagories": "Electronics",
+    "SubCatagories": "Mobile",
+    "BrandName": "Samsung",
+    "ProductId": "PSAMDUO1",
+    "ProductName": "DUOS",
+    "Price": "11000",
+    "Rating": "4"
+  },
+  {
+    "Id": "582b69c2597e11c45bd10ea5",
+    "Catagories": "Electronics",
+    "SubCatagories": "Mobile",
+    "BrandName": "Microsoft",
+    "ProductId": "PNOKLUM1",
+    "ProductName": "Lumia 930",
+    "Price": "45000",
+    "Rating": "4"
+  },
+  {
+    "Id": "582b6a47597e11c45bd10ea6",
+    "Catagories": "Electronics",
+    "SubCatagories": "Tablet",
+    "BrandName": "MicroMax",
+    "ProductId": "TABMIC1",
+    "ProductName": "Tablet 520",
+    "Price": "4500",
+    "Rating": "3"
+  },
+  {
+    "Id": "582b6f8a597e11c45bd10ea7",
+    "Catagories": "Cloths",
+    "SubCatagories": "Men",
+    "BrandName": "Polo",
+    "ProductId": "TPOLO1",
+    "ProductName": "T-Shirt 32Inch",
+    "Price": "4500",
+    "Rating": "3"
+  },
+  {
+    "Id": "582b6fc0597e11c45bd10ea8",
+    "Catagories": "Cloths",
+    "SubCatagories": "Women",
+    "BrandName": "Lee",
+    "ProductId": "LJEE1",
+    "ProductName": "Jeans 30Inch",
+    "Price": "1500",
+    "Rating": "3.5"
+  },
+  {
+    "Id": "582b7023597e11c45bd10ea9",
+    "Catagories": "Cloths",
+    "SubCatagories": "Kids",
+    "BrandName": "Kinder Garden",
+    "ProductId": "KGRDN1",
+    "ProductName": "Shirt 12 Inch",
+    "Price": "500",
+    "Rating": "4"
+  }
+]</pre>
+                </p>
+
+                <h2>Request</h2>
+                <p>
+                    http://localhost/MongDbSample/ProductCatalog/GetAllProducts/PSAMDUO1
+                </p>
+
+
+                <h2>Response</h2>
+                <p>
+                    <pre>
+                 {
+  "Id": "582b6921597e11c45bd10ea4",
+  "Catagories": "Electronics",
+  "SubCatagories": "Mobile",
+  "BrandName": "Samsung",
+  "ProductId": "PSAMDUO1",
+  "ProductName": "DUOS",
+  "Price": "11000",
+  "Rating": "4"
+}
+</pre>
+                </p>
+
+                <h2>Request</h2>
+                <p>
+                    http://localhost/MongDbSample/ProductCatalog/AddProduct
+                </p>
+                <b>Content-Type:application/json</b>
+
+                <h2>Response</h2>
+                <p>
+                    <pre>{ "_Id":"abcdef-hijkl-mnop","Catagories" : "Electronics", "SubCatagories" : "Mobile", "Brand Name" : "Samsung", "ProductId" : "PSAMDUO1", "ProductName" : "DUOS", "Price" : "11000", "Rating" : "4" }
+</pre>
+                </p>
+
+
+                <h2>Delete A Product By Id</h2>
+                <p>http://localhost/MongDbSample/ProductCatalog/DeleteProduct/KGRDN2</p>
+            </div>
+        </div>
+        <hr />
+        <div class="jumbotron">
+            <h1>Price List Service Api Documentation</h1>
+        </div>
+        <div class="row">
+            <p>
+                http://localhost/PricingServiceWeb/PricingService/Price
+            </p>
+            <b>Content-Type:application/json</b>
+
+            <h2>Response</h2>
+            <p>
+                <pre>
+                           {
+    "Id": "582b6921597e11c45bd10ea4",
+    "Catagories": "Electronics",
+    "SubCatagories": "Mobile-T",
+    "BrandName": "Samsung",
+    "ProductId": "PSAMDUO1",
+    "ProductName": "DUOS",
+    "Price": "11000",
+    "Rating": "4"
+  }
+</pre>
+</div>
+            <footer>
+                <p>&copy; 2016 - My ASP.NET Application</p>
+            </footer>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>

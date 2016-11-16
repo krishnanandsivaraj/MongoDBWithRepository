@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Web Api Requests</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Request</h2>
+        <p>
+            http://localhost/MongDbSample/ProductCatalog/GetAllProducts
+        </p>
+
+        <h2>Response</h2>
+        <p>
+            <pre>
+                [
+  {
+    "Id": "582b6921597e11c45bd10ea4",
+    "Catagories": "Electronics",
+    "SubCatagories": "Mobile",
+    "BrandName": "Samsung",
+    "ProductId": "PSAMDUO1",
+    "ProductName": "DUOS",
+    "Price": "11000",
+    "Rating": "4"
+  },
+  {
+    "Id": "582b69c2597e11c45bd10ea5",
+    "Catagories": "Electronics",
+    "SubCatagories": "Mobile",
+    "BrandName": "Microsoft",
+    "ProductId": "PNOKLUM1",
+    "ProductName": "Lumia 930",
+    "Price": "45000",
+    "Rating": "4"
+  },
+  {
+    "Id": "582b6a47597e11c45bd10ea6",
+    "Catagories": "Electronics",
+    "SubCatagories": "Tablet",
+    "BrandName": "MicroMax",
+    "ProductId": "TABMIC1",
+    "ProductName": "Tablet 520",
+    "Price": "4500",
+    "Rating": "3"
+  },
+  {
+    "Id": "582b6f8a597e11c45bd10ea7",
+    "Catagories": "Cloths",
+    "SubCatagories": "Men",
+    "BrandName": "Polo",
+    "ProductId": "TPOLO1",
+    "ProductName": "T-Shirt 32Inch",
+    "Price": "4500",
+    "Rating": "3"
+  },
+  {
+    "Id": "582b6fc0597e11c45bd10ea8",
+    "Catagories": "Cloths",
+    "SubCatagories": "Women",
+    "BrandName": "Lee",
+    "ProductId": "LJEE1",
+    "ProductName": "Jeans 30Inch",
+    "Price": "1500",
+    "Rating": "3.5"
+  },
+  {
+    "Id": "582b7023597e11c45bd10ea9",
+    "Catagories": "Cloths",
+    "SubCatagories": "Kids",
+    "BrandName": "Kinder Garden",
+    "ProductId": "KGRDN1",
+    "ProductName": "Shirt 12 Inch",
+    "Price": "500",
+    "Rating": "4"
+  }
+]</pre>
+        </p>
+
+        <h2>Request</h2>
+        <p>
+            http://localhost/MongDbSample/ProductCatalog/GetAllProducts/PSAMDUO1
+        </p>
+
+
+        <h2>Response</h2>
+        <p>
+            <pre>
+                 {
+  "Id": "582b6921597e11c45bd10ea4",
+  "Catagories": "Electronics",
+  "SubCatagories": "Mobile",
+  "BrandName": "Samsung",
+  "ProductId": "PSAMDUO1",
+  "ProductName": "DUOS",
+  "Price": "11000",
+  "Rating": "4"
+}
+</pre>
+        </p>
+
+        <h2>Request</h2>
+        <p>
+            http://localhost/MongDbSample/ProductCatalog/AddProduct
+        </p>
+        <b>Content-Type:application/json</b>
+
+        <h2>Response</h2>
+        <p>
+            <pre>
+                                 { "_Id":"abcdef-hijkl-mnop","Catagories" : "Electronics", "SubCatagories" : "Mobile", "Brand Name" : "Samsung", "ProductId" : "PSAMDUO1", "ProductName" : "DUOS", "Price" : "11000", "Rating" : "4" }
+</pre>
+        </p>
+
+
+        <h2>Delete A Product By Id</h2>
+        <p>http://localhost/MongDbSample/ProductCatalog/DeleteProduct/KGRDN2</p>
+    </div>
+</div>
